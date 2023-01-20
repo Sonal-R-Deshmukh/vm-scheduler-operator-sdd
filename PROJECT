@@ -1,0 +1,65 @@
+domain: xyzcompany.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: vm-scheduler-operator-sdd
+repo: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: aws
+  kind: AWSVMSchedulerStartsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/aws/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: azure
+  kind: AzureVMSchedulerStartsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/azure/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: gcp
+  kind: GCPVMSchedulerStartsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/gcp/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: aws
+  kind: AWSVMSchedulerStopsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/aws/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: azure
+  kind: AzureVMSchedulerStopsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/azure/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: gcp
+  kind: GCPVMSchedulerStopsdd
+  path: github.com/Sonal-R-Deshmukh/vm-scheduler-operator-sdd/apis/gcp/v1
+  version: v1
+version: "3"

@@ -1,0 +1,12 @@
+apiVersion: gcp.xyzcompany.com/v1
+kind: GCPVMSchedulerStopsdd
+metadata:
+  labels:
+    app.kubernetes.io/name: gcpvmschedulerstopsdd
+    app.kubernetes.io/instance: gcpvmschedulerstopsdd-sample
+    app.kubernetes.io/part-of: vm-scheduler-operator-sdd
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vm-scheduler-operator-sdd
+  name: gcpvmschedulerstopsdd-sample
+spec:
+  # TODO(user): Add fields here

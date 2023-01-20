@@ -1,0 +1,27 @@
+# permissions for end users to view azurevmschedulerstopsdds.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: azurevmschedulerstopsdd-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: vm-scheduler-operator-sdd
+    app.kubernetes.io/part-of: vm-scheduler-operator-sdd
+    app.kubernetes.io/managed-by: kustomize
+  name: azurevmschedulerstopsdd-viewer-role
+rules:
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstopsdds
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstopsdds/status
+  verbs:
+  - get
